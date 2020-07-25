@@ -6,6 +6,9 @@ In order to use cdktf, you'll need Terraform, Node.js, and Yarn. So this docker 
 
 Check https://3musketeers.io/.
 
+Image contains:
+- Terraform CLI
+- cdktf-cli
 
 # Distributions
 
