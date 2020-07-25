@@ -1,11 +1,11 @@
 name: Build and Push docker image
 
 on:
-  pull_request:
-    branches: [ master ]
+  release:
+    types: [published]
 
 jobs:
-  validate:
+  check_cdktf_releases:
     runs-on: ubuntu-latest
 
     steps:

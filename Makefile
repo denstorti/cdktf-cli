@@ -20,4 +20,5 @@ push:
 	docker push ${REPO}/${IMAGE_NAME}:latest
 
 run: 
-	docker run --rm ${IMAGE_NAME}:${VERSION}
+	docker run --rm ${IMAGE_NAME}:${VERSION} cdktf
+	docker run --rm ${IMAGE_NAME}:${VERSION} terraform
