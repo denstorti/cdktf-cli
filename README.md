@@ -1,4 +1,4 @@
-![Build and Push docker image](https://github.com/denstorti/cdktf-cli/workflows/Build%20and%20Push%20docker%20image/badge.svg?event=status)
+![Build and Push docker image](https://github.com/denstorti/cdktf-cli/workflows/Build%20and%20Push%20docker%20image/badge.svg?branch=master&event=push)
 
 # Docker Image for cdktf-cli (Terraform CDK)
 
