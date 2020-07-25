@@ -1,4 +1,4 @@
-name: Build and Push docker image
+name: Check cdktf releases
 
 on:
   release:
