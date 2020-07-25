@@ -1,6 +1,6 @@
 REPO ?= denstorti
 
-CDKTF_VERSION ?= 0.0.11
+CDKTF_VERSION ?= 0.0.12
 TF_VERSION ?= 0.12.29
 
 IMAGE_NAME ?= cdktf-cli
