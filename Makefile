@@ -1,6 +1,9 @@
 REPO ?= denstorti
 VERSION ?= 0.0.12
 IMAGE_NAME ?= cdktf-cli
+DOCKER_HUB_TOKEN ?=
+
+all: build run push
 
 build:
 	docker build \
@@ -12,6 +15,7 @@ build:
 		- < Dockerfile
 
 push:
+	docker login --username ${REPO} --password ${DOCKER_HUB_TOKEN}
 	docker push ${REPO}/${IMAGE_NAME}:${VERSION}
 	docker push ${REPO}/${IMAGE_NAME}:latest
 
