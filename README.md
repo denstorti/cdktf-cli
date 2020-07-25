@@ -14,6 +14,14 @@ Image contains:
 
 - DockerHub: https://hub.docker.com/repository/docker/denstorti/cdktf
 
+# Test locally
+
+Test locally using `act`:
+
+```
+act -P ubuntu-latest=nektos/act-environments-ubuntu:18.04 -j check_cdktf_releases
+```
+
 # Building it
 
 Build:

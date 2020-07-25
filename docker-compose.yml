@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  alpine:
+    build: 
+      dockerfile: ./scripts/Dockerfile
+      context: .
+    environment:
+      - CDKTF_VERSION
+    volumes:
+      - .:/src
+    working_dir: /src

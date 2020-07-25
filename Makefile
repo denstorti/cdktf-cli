@@ -1,10 +1,14 @@
 REPO ?= denstorti
 
-CDKTF_VERSION ?= 0.0.12
+CDKTF_VERSION ?= 0.0.11
 TF_VERSION ?= 0.12.29
 
 IMAGE_NAME ?= cdktf-cli
 DOCKER_HUB_TOKEN ?=
+
+COMPOSE_ALPINE = docker-compose run --rm alpine
+
+.EXPORT_ALL_VARIABLES:
 
 all: build run push
 
@@ -26,3 +30,7 @@ push:
 run: 
 	docker run --rm ${IMAGE_NAME}:${CDKTF_VERSION} cdktf
 	docker run --rm ${IMAGE_NAME}:${CDKTF_VERSION} terraform
+
+check_new_version:
+	docker-compose build alpine
+	$(COMPOSE_ALPINE) bash scripts/check_new_version.sh
