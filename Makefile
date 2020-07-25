@@ -28,8 +28,8 @@ push:
 	docker push ${REPO}/${IMAGE_NAME}:latest
 
 run: 
-	docker run --rm ${IMAGE_NAME}:${CDKTF_VERSION} cdktf
-	docker run --rm ${IMAGE_NAME}:${CDKTF_VERSION} terraform
+	docker run --rm ${IMAGE_NAME}:${CDKTF_VERSION} cdktf --version
+	docker run --rm ${IMAGE_NAME}:${CDKTF_VERSION} terraform --version
 
 check_new_version:
 	docker-compose build alpine
