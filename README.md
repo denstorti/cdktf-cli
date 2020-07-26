@@ -14,7 +14,23 @@ Image contains:
 
 - DockerHub: https://hub.docker.com/repository/docker/denstorti/cdktf
 
-# Test locally
+# Example: init a cdktf workdir
+
+Run the container:
+
+```
+docker run -it --rm -v $(pwd):/src -w '/src' cdktf-cli:latest sh
+```
+
+Initialise cdktf:
+
+```
+cdktf init --template python
+```
+
+# Test the pipeline locally (GH Actions)
+
+> https://github.com/nektos/act
 
 Test locally using `act`:
 
